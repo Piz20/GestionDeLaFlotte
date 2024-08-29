@@ -8,10 +8,7 @@ namespace Gestion_de_la_flotte.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-/// <summary>
-/// Commentaire
-/// </summary>
-/// <param name="logger"></param>
+        private string? Piz; 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
