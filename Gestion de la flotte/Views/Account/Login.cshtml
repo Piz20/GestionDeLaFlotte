@@ -1,0 +1,64 @@
+﻿@model Gestion_de_la_flotte.Models.LoginViewModel
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/Login.css">
+</head>
+
+<body>
+    <div class="container-fluid h-100 login-container">
+        <div class="row h-100">
+            <div class="col-md-6 d-none d-md-block bg-image"></div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="login-form text-center p-5">
+                    <h1 class="mb-4 welcome-title">Bienvenue sur Fleet Management</h1>
+                    <form id="login-form" asp-action="Login" method="post">
+                        <div class="form-group position-relative">
+                            <label asp-for="Email" class="sr-only">Email:</label>
+                            <i class="fas fa-envelope position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%);"></i>
+                            <input id="email" asp-for="Email" class="form-control pl-5" placeholder="Entrez votre email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group position-relative">
+                            <label asp-for="Password" class="sr-only">Mot de passe:</label>
+                            <i class="fas fa-lock position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%);"></i>
+                            <input id="password" asp-for="Password" class="form-control pl-5" placeholder="Entrez votre mot de passe" type="password" />
+                            <i class="fas fa-eye position-absolute toggle-password" data-target="#password" style="top: 50%; right: 15px; transform: translateY(-50%); cursor: pointer;"></i>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form-check">
+                            <input asp-for="RememberMe" class="form-check-input" type="checkbox" />
+                            <label asp-for="RememberMe" class="form-check-label">Se souvenir de moi</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="submit-button">
+                            <span id="submit-text">Se connecter</span>
+                        </button>
+                   </form>
+                    <!-- Notification element -->
+                    <div id="notification" class="alert d-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="~/js/Login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/%40popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
