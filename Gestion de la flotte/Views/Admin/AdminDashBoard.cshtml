@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord Admin</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/AdminDashboard.css">
+</head>
+
+<body class="bg-light">
+    <!-- Loader -->
+    <div id="page-loader" class="d-none">
+        <div class="spinner-border text-danger" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div>
+
+    <!-- Include Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="admin-dashboard bg-white border rounded p-4 shadow-lg">
+            <h1 class="text-center text-danger mb-4">Tableau de Bord Admin</h1>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="@Url.Action("AdminUserManagement","Admin")" class="text-decoration-none">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-users fa-3x text-danger mb-3"></i>
+                                <h2 class="card-title text-dark">Gestion des Utilisateurs</h2>
+                                <p class="card-text text-muted">Gérer les utilisateurs de l'application</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="AdminFleetManagement.html" class="text-decoration-none">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-phone fa-3x text-danger mb-3"></i>
+                                <h2 class="card-title text-dark">Gestion des Flottes</h2>
+                                <p class="card-text text-muted">Gérer les différents numéros de téléphone et leurs quotas</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="AdminInvoiceManagement.html" class="text-decoration-none">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-file-invoice-dollar fa-3x text-danger mb-3"></i>
+                                <h2 class="card-title text-dark">Gestion des Factures</h2>
+                                <p class="card-text text-muted">Visualiser et gérer les factures</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="send-email.html" class="text-decoration-none">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope fa-3x text-danger mb-3"></i>
+                                <h2 class="card-title text-dark">Envoyer un E-mail</h2>
+                                <p class="card-text text-muted">Envoyer des e-mails aux utilisateurs</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="receive-emails.html" class="text-decoration-none">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-inbox fa-3x text-danger mb-3"></i>
+                                <h2 class="card-title text-dark">Réception des E-mails</h2>
+                                <p class="card-text text-muted">Consulter les e-mails reçus</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="include.js"></script>
+    <script>
+        includeHTML();
+    </script>
+    <script src="~/js/AdminDashboard.js"></script>
+</body>
+
+</html>

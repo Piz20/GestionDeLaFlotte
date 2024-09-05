@@ -1,0 +1,107 @@
+﻿@model Gestion_de_la_flotte.Models.FleetUser
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un utilisateur</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/AdminAddFleetUser.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <a class="navbar-brand" href="AdminDashboard.html">
+            <img src="~/logo_camrail.png" alt="Logo CAMRAIL" style="height: 60px;"> <!-- Hauteur agrandie -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="AdminUserManagement.html">Gestion des Utilisateurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AdminFleetManagement.html">Gestion des Flottes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AdminInvoiceManagement.html">Gestion des Factures</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="send-email.html">Envoyer un E-mail</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="receive-emails.html">Réception des E-mails</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg">
+                    <div class="card-header text-white bg-gradient-custom">
+                        <h3 class="text-center">Ajouter un utilisateur</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="addUserForm" asp-action="AdminAddFleetUser" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label asp-for="Matricule" class="form-label"></label>
+                                        <input asp-for="Matricule" class="form-control" placeholder="Entrer le matricule de l'utilisateur" />
+                                        <span asp-validation-for="Matricule" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label asp-for="Name" class="form-label"></label>
+                                        <input asp-for="Name" class="form-control" placeholder="Entrer le nom" />
+                                        <span asp-validation-for="Name" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label asp-for="SurName" class="form-label"></label>
+                                        <input asp-for="SurName" class="form-control" placeholder="Entrer le prénom" />
+                                        <span asp-validation-for="SurName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label asp-for="CNINumber" class="form-label"></label>
+                                        <input asp-for="CNINumber" class="form-control" placeholder="Entrer le numéro de CNI" />
+                                        <span asp-validation-for="CNINumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label asp-for="Email" class="form-label"></label>
+                                <input asp-for="Email" class="form-control" placeholder="Entrer l'email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-danger btn-block btn-lg">Ajouter l'utilisateur</button>
+                            </div>
+                        </form>
+                    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/AdminAddFleetUser.js"></script>
+</body>
+
+</html>

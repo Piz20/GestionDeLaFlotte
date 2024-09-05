@@ -1,0 +1,135 @@
+/* Global Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F8F8F8CC; /* Couleur de fond translucide */
+}
+
+/* Background Image */
+.bg-image {
+    background-image: url('../quai_de_bessengue.jpg'); /* Chemin correct de l'image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ajustez cette valeur en fonction de la hauteur souhaitée */
+    z-index: -2; /* Image de fond en arrière-plan */
+}
+
+/* Translucent Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(248, 248, 248, 0.8); /* Couleur de fond translucide avec opacité */
+    z-index: -1; /* Positionné au-dessus de l'image de fond mais en dessous du contenu principal */
+}
+
+/* Container for Registration Form */
+.register-container {
+    min-height: calc(100vh - 120px); /* Assure que le conteneur couvre toute la hauteur de la vue en laissant de l'espace pour le footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px; /* Ajusté pour les petits écrans */
+    position: relative; /* Assure que le conteneur est positionné relativement */
+    z-index: 1; /* Positionné au-dessus de l'overlay */
+    box-sizing: border-box; /* Assure que le padding est inclus dans la hauteur totale */
+}
+
+/* Registration Form Styles */
+.register-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+    .register-form h1 {
+        font-size: 2.5rem;
+        color: #333333;
+        margin-bottom: 20px;
+        font-weight: 700;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+/* Form Control Styling */
+.form-control {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin-bottom: 10px; /* Espace entre les champs et les messages d'erreur */
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #3cd8b9;
+    border-color: #3cd8b9;
+    font-size: 1.2rem;
+    height: 50px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #2da48f;
+        border-color: #2da48f;
+    }
+
+/* Error Message Styling */
+.text-danger {
+    display: block;
+    margin-top: 50px; /* Espace entre le champ de saisie et le message d'erreur */
+    font-size: 0.875rem;
+    color: #dc3545;
+    position: absolute;
+    bottom: -30px; /* Positionné sous le champ de saisie */
+    left: 15px;
+    width: calc(100% - 30px); /* Assure que le message d'erreur est aligné avec le champ de saisie */
+}
+
+/* Form Group with Relative Positioning for Error Messages */
+.form-group {
+    margin-bottom: 30px; /* Réduit la marge pour s'adapter à la hauteur des messages d'erreur */
+    position: relative;
+}
+
+/* Eye Icon Styling */
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Ensure Error Messages Do Not Overlap with Form Fields */
+input.form-control {
+    padding-right: 40px; /* Pour faire de la place pour l'icône de l'œil */
+}
+
+/* Footer Styling */
+footer {
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+    margin-top: 100%; /* Positionne le footer en bas de la page */
+}
+
+#submit-button {
+    height: 50px; /* Hauteur du bouton */
+}

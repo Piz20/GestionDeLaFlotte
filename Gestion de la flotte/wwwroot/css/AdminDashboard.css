@@ -1,0 +1,112 @@
+/* Corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Transition pour les changements de page */
+}
+
+/* Classe pour gérer la transition de page */
+.fade-out {
+    opacity: 0;
+}
+
+/* Loader */
+#page-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Assure que le loader est au-dessus de tout */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out; /* Effet de fondu pour le loader */
+}
+
+.d-none {
+    display: none !important;
+}
+
+/* Tableau de bord */
+.admin-dashboard {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres et textes */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #dc3545; /* Rouge CAMRAIL pour le titre principal */
+    margin-bottom: 2rem; /* Espacement supplémentaire */
+}
+
+h2.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #dc3545; /* Rouge CAMRAIL */
+    margin-bottom: 0.5rem; /* Marge pour le sous-titre */
+}
+
+p.card-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem; /* Uniformisation des marges */
+}
+
+/* Cartes */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f8f9fa; /* Variation de couleur au survol */
+}
+
+/* Icônes */
+.card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #dc3545; /* Rouge CAMRAIL */
+}
+
+/* Dispositions */
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Ajustements des marges pour les cartes */
+.card-body {
+    padding: 2rem;
+}
+
+.card-body h2 {
+    margin-bottom: 1rem;
+}
+
+.card-body p {
+    margin-bottom: 1rem; /* Uniformisation des marges */
+}
+
+.card-body a {
+    margin-top: 1rem; /* Uniformisation des marges */
+}
+
+/* Effet de survol sur les liens */
+a {
+    color: #dc3545; /* Rouge CAMRAIL */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #c82333; /* Un rouge légèrement plus foncé au survol */
+}
