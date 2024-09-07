@@ -68,6 +68,7 @@ body, html {
     border-radius: 5px;
     border: 1px solid #ced4da;
     font-size: 1rem;
+    margin-bottom: 20px;
     padding: 10px 15px;
     margin-bottom: 10px; /* Espace entre les champs et les messages d'erreur */
 }
@@ -94,14 +95,11 @@ body, html {
     font-size: 0.875rem;
     color: #dc3545;
     position: absolute;
-    bottom: -30px; /* Positionné sous le champ de saisie */
     left: 15px;
-    width: calc(100% - 30px); /* Assure que le message d'erreur est aligné avec le champ de saisie */
 }
 
 /* Form Group with Relative Positioning for Error Messages */
 .form-group {
-    margin-bottom: 30px; /* Réduit la marge pour s'adapter à la hauteur des messages d'erreur */
     position: relative;
 }
 

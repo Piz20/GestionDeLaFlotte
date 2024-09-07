@@ -4,6 +4,7 @@ namespace Gestion_de_la_flotte.Models
 {
     public class RegisterViewModel
     {
+
         [Required(ErrorMessage = "L'adresse email est requise.")]
         [EmailAddress(ErrorMessage = "Adresse email invalide.")]
         [Display(Name = "Email")]

@@ -31,6 +31,7 @@ namespace Gestion_de_la_flotte.Controllers
                 if (existingUser != null)
                 {
                     ModelState.AddModelError("Email", "Cette adresse email est déjà utilisée.");
+                    // Retirer le mot de passe pour qu'il ne soit pas affiché en cas d'erreur
                     model.Password = string.Empty;
                     model.ConfirmPassword = string.Empty;
                     return View(model);
@@ -46,18 +47,24 @@ namespace Gestion_de_la_flotte.Controllers
                         return RedirectToAction("Index", "Home");
                     }
 
+                    // Ajouter les erreurs au ModelState pour les afficher
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    }
+
+                    // Retirer le mot de passe pour qu'il ne soit pas affiché en cas d'erreur
                     model.Password = string.Empty;
                     model.ConfirmPassword = string.Empty;
                     return View(model);
                 }
             }
 
-            // Si le modèle n'est pas valide
             model.Password = string.Empty;
             model.ConfirmPassword = string.Empty;
             return View(model);
         }
-
+        
 
         [HttpGet]
         public IActionResult Login()
@@ -77,7 +84,6 @@ namespace Gestion_de_la_flotte.Controllers
                 if (result.Succeeded)
                 {
                     // Redirection vers la page d'accueil si la connexion est réussie
-                    return RedirectToAction("AdminDashBoard", "Admin");
                 }
                 else if (result.IsLockedOut)
                 {
