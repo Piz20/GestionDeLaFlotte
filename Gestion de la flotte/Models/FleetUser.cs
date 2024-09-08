@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Gestion_de_la_flotte.Models
 {
@@ -18,12 +19,16 @@ namespace Gestion_de_la_flotte.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Le nom est requis.")]
+        [DisplayName("Nom")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Le prénom est requis.")]
+        [DisplayName("Prénom")]
         public string SurName { get; set; }
 
+
         [Required(ErrorMessage = "Le numéro CNI est requis.")]
+        [DisplayName("Numéro de CNI")]
         public string CNINumber { get; set; }
 
         public DateTime CreationDate { get; set; }

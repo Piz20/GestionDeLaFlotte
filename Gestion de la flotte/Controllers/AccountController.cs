@@ -44,7 +44,7 @@ namespace Gestion_de_la_flotte.Controllers
                     if (result.Succeeded)
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("AdminDashBoard", "Admin");
                     }
 
                     // Ajouter les erreurs au ModelState pour les afficher
@@ -84,6 +84,7 @@ namespace Gestion_de_la_flotte.Controllers
                 if (result.Succeeded)
                 {
                     // Redirection vers la page d'accueil si la connexion est réussie
+                    return RedirectToAction("AdminDashBoard", "Admin");
                 }
                 else if (result.IsLockedOut)
                 {
