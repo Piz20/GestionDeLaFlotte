@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="AdminUserManagement.html">Gestion des Utilisateurs</a>
+                    <a class="nav-link" href="@Url.Action("AdminUserManagement","Admin")">Gestion des Utilisateurs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="AdminFleetManagement.html">Gestion des Flottes</a>
@@ -44,6 +44,14 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <!-- Message de succès -->
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        @TempData["SuccessMessage"]
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
                 <div class="card shadow-lg">
                     <div class="card-header text-white bg-gradient-custom">
                         <h3 class="text-center">Ajouter un utilisateur</h3>

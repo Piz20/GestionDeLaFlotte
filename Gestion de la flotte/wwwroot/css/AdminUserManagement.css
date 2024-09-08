@@ -2,177 +2,224 @@
 
 /* Corps global */
 body {
-    background-color: #f8f9fa;
-    color: #333;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Couleur de fond légère pour le corps de la page */
+    color: #333; /* Couleur du texte principale */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police utilisée pour le texte */
 }
 
 /* Titre principal */
 h1 {
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #dc3545; /* Rouge */
+    font-weight: 700; /* Poids de la police pour le titre principal */
+    font-size: 2.5rem; /* Taille de la police du titre principal */
+    color: #dc3545; /* Couleur rouge pour le titre principal */
 }
 
 /* Sous-titres */
 h2 {
-    font-weight: 600;
-    font-size: 1.75rem;
-    color: #333;
+    font-weight: 600; /* Poids de la police pour les sous-titres */
+    font-size: 1.75rem; /* Taille de la police des sous-titres */
+    color: #333; /* Couleur du texte des sous-titres */
 }
 
 /* Espacement autour des sections */
 .container {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 20px; /* Espacement supérieur de la section */
+    padding-bottom: 20px; /* Espacement inférieur de la section */
 }
 
 /* Boutons */
 .btn-primary {
-    background-color: #dc3545; /* Rouge */
-    border-color: #dc3545;
-    transition: background-color 0.3s ease;
+    background-color: #dc3545; /* Couleur de fond pour les boutons primaires */
+    border-color: #dc3545; /* Couleur de la bordure pour les boutons primaires */
+    transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
 }
 
     .btn-primary:hover {
-        background-color: #c82333;
-        border-color: #bd2130;
+        background-color: #c82333; /* Couleur de fond au survol pour les boutons primaires */
+        border-color: #bd2130; /* Couleur de la bordure au survol pour les boutons primaires */
     }
 
 .btn-success {
-    background-color: #28a745;
-    border-color: #28a745;
-    transition: background-color 0.3s ease;
+    background-color: #28a745; /* Couleur de fond pour les boutons de succès */
+    border-color: #28a745; /* Couleur de la bordure pour les boutons de succès */
+    transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
 }
 
     .btn-success:hover {
-        background-color: #218838;
-        border-color: #1e7e34;
+        background-color: #218838; /* Couleur de fond au survol pour les boutons de succès */
+        border-color: #1e7e34; /* Couleur de la bordure au survol pour les boutons de succès */
     }
 
 .btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: #6c757d; /* Couleur de fond pour les boutons secondaires */
+    border-color: #6c757d; /* Couleur de la bordure pour les boutons secondaires */
 }
 
     .btn-secondary:hover {
-        background-color: #5a6268;
-        border-color: #545b62;
+        background-color: #5a6268; /* Couleur de fond au survol pour les boutons secondaires */
+        border-color: #545b62; /* Couleur de la bordure au survol pour les boutons secondaires */
     }
 
 /* Table des utilisateurs */
 .table {
-    border-collapse: separate;
-    border-spacing: 0;
+    border-collapse: separate; /* Séparation des bordures de la table */
+    border-spacing: 0; /* Espacement entre les cellules de la table */
 }
 
     .table thead {
-        background-color: #f1f1f1;
-        color: #555;
+        background-color: #f1f1f1; /* Couleur de fond pour l'en-tête de la table */
+        color: #555; /* Couleur du texte de l'en-tête */
     }
 
     .table tfoot {
-        background-color: #f1f1f1;
-        color: #555;
+        background-color: #f1f1f1; /* Couleur de fond pour le pied de page de la table */
+        color: #555; /* Couleur du texte du pied de page */
     }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05); /* Couleur de fond pour les lignes impaires de la table */
 }
 
 /* Formulaires */
 .edit-user-form, .email-form {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #ffffff;
-    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour les formulaires */
+    border-radius: 8px; /* Coins arrondis pour les formulaires */
+    background-color: #ffffff; /* Couleur de fond pour les formulaires */
+    padding: 20px; /* Espacement interne des formulaires */
 }
 
 /* Input fields */
 .form-control {
-    border-radius: 4px;
-    border: 1px solid #ced4da;
-    transition: border-color 0.3s ease;
+    border-radius: 4px; /* Coins arrondis pour les champs de formulaire */
+    border: 1px solid #ced4da; /* Bordure des champs de formulaire */
+    transition: border-color 0.3s ease; /* Transition pour la couleur de la bordure au survol */
 }
 
     .form-control:focus {
-        border-color: #dc3545; /* Rouge */
-        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+        border-color: #dc3545; /* Couleur de la bordure lorsque le champ est sélectionné */
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); /* Ombre portée au survol du champ de formulaire */
     }
 
 /* Chargement */
 #loading .spinner-border {
-    width: 3rem;
-    height: 3rem;
+    width: 3rem; /* Largeur du spinner de chargement */
+    height: 3rem; /* Hauteur du spinner de chargement */
 }
 
 #loading p {
-    font-size: 1.25rem;
-    margin-top: 10px;
+    font-size: 1.25rem; /* Taille de la police du texte de chargement */
+    margin-top: 10px; /* Espacement supérieur du texte de chargement */
 }
 
 /* Messages d'erreur */
 .alert-danger {
-    background-color: #f8d7da;
-    color: #721c24;
-    border-color: #f5c6cb;
+    background-color: #f8d7da; /* Couleur de fond pour les alertes d'erreur */
+    color: #721c24; /* Couleur du texte des alertes d'erreur */
+    border-color: #f5c6cb; /* Couleur de la bordure des alertes d'erreur */
 }
 
 /* Table responsive */
 .table-responsive {
-    overflow-x: auto;
+    overflow-x: auto; /* Défilement horizontal pour les tables si nécessaire */
 }
 
 /* Cards (for forms) */
 .card {
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
+    border-radius: 0.5rem; /* Coins arrondis pour les cartes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée pour les cartes */
+    margin-bottom: 1.5rem; /* Espacement inférieur des cartes */
 }
 
 /* Margin adjustments */
 .mb-4 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Espacement inférieur */
 }
 
 .mt-2 {
-    margin-top: 0.5rem;
+    margin-top: 0.5rem; /* Espacement supérieur */
 }
+
 /* Table des utilisateurs - thème noir */
 .table-dark {
-    color: #fff;
-    background-color: #343a40;
+    color: #fff; /* Couleur du texte pour les tables à thème noir */
+    background-color: #343a40; /* Couleur de fond pour les tables à thème noir */
 }
 
     .table-dark thead {
-        background-color: #212529;
-        color: #fff;
+        background-color: #212529; /* Couleur de fond pour l'en-tête des tables à thème noir */
+        color: #fff; /* Couleur du texte de l'en-tête des tables à thème noir */
     }
 
     .table-dark tbody {
-        background-color: #343a40;
+        background-color: #343a40; /* Couleur de fond pour le corps des tables à thème noir */
     }
 
         .table-dark tbody tr:nth-of-type(odd) {
-            background-color: #3c4046;
+            background-color: #3c4046; /* Couleur de fond pour les lignes impaires des tables à thème noir */
         }
 
         .table-dark tbody td {
-            color: #fff;
+            color: #fff; /* Couleur du texte des cellules des tables à thème noir */
         }
 
     .table-dark tfoot {
-        background-color: #212529;
-        color: #fff;
+        background-color: #212529; /* Couleur de fond pour le pied de page des tables à thème noir */
+        color: #fff; /* Couleur du texte du pied de page des tables à thème noir */
     }
 
 /* Table responsive - ajustements spécifiques au thème noir */
 .table-responsive .table-dark {
-    border: 1px solid #444;
+    border: 1px solid #444; /* Bordure des tables à thème noir */
 }
 
 /* Espacement et ombre des cartes */
 .card {
-    border: 1px solid #ccc;
-    background-color: #ffffff;
+    border: 1px solid #ccc; /* Bordure des cartes */
+    background-color: #ffffff; /* Couleur de fond des cartes */
+}
+
+/* Style personnalisé pour les boutons de pagination */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.5em 1em; /* Espacement interne des boutons de pagination */
+    margin: 0 0.1em; /* Espacement autour des boutons de pagination */
+    border: 1px solid #ddd; /* Bordure des boutons de pagination */
+    border-radius: 4px; /* Coins arrondis pour les boutons de pagination */
+    background-color: #f8f9fa; /* Couleur de fond pour les boutons de pagination */
+    color: #007bff; /* Couleur du texte des boutons de pagination */
+    font-size: 0.9em; /* Taille de la police des boutons de pagination */
+    cursor: pointer; /* Curseur de pointeur pour les boutons de pagination */
+    transition: background-color 0.3s, color 0.3s; /* Transition pour les effets de survol des boutons de pagination */
+}
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+        background-color: #007bff; /* Couleur de fond au survol des boutons de pagination */
+        color: #fff; /* Couleur du texte au survol des boutons de pagination */
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+        background-color: #007bff; /* Couleur de fond pour le bouton de pagination actuel */
+        color: #fff; /* Couleur du texte pour le bouton de pagination actuel */
+        border: 1px solid #007bff;
+    }
+
+.error {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 0.25em;
+}
+.swal2-popup {
+    position: absolute !important; /* Assurez-vous que le popup est positionné absolument */
+}
+
+.swal2-title {
+    cursor: move; /* Indiquer que la zone est déplaçable */
+}
+
+.ui-resizable-handle {
+    background: #f1f1f1; /* Couleur des poignées de redimensionnement */
+    border: 1px solid #ddd; /* Bordure des poignées de redimensionnement */
+}
+
+.ui-resizable-se {
+    cursor: se-resize; /* Curseur pour la poignée de redimensionnement en bas à droite */
 }
