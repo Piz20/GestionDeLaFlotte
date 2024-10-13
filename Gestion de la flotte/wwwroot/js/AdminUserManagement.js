@@ -87,6 +87,7 @@ function confirmDelete(userId, buttonElement) {
 }
 
 function showEditPopup(userId, buttonElement) {
+    console.log("show edit popup")
     $.ajax({
         url: AdminEditUserUrl,
         type: 'GET',
@@ -99,6 +100,7 @@ function showEditPopup(userId, buttonElement) {
                 showConfirmButton: false,
                 showCloseButton: true,
                 didOpen: () => {
+                   
                     // Appliquer le style pour rendre le popup déplacable et redimensionnable
                     const popupElement = Swal.getPopup();
                     $(popupElement).draggable({
@@ -110,12 +112,8 @@ function showEditPopup(userId, buttonElement) {
                         minHeight: 200, // Hauteur minimale
                         alsoResize: popupElement.querySelector('.swal2-content') // Redimensionner le contenu en même temps
                     });
-
                     // Gérer la soumission du formulaire dans le popup
-                    $('#editUserForm').on('submit', function (e) {
-                        e.preventDefault(); // Empêcher le rechargement de la page
-                        submitEditForm(this, buttonElement);
-                    });
+                   
                 }
             });
         },
@@ -126,6 +124,8 @@ function showEditPopup(userId, buttonElement) {
 }
 
 function submitEditForm(form, buttonElement) {
+    
+   
     fetch(AdminUpdateUserUrl, {
         method: 'POST',
         headers: {
