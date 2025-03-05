@@ -19,6 +19,12 @@ builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfi
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
+// Configuration pour utiliser votre page de connexion personnalisée
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login"; // Chemin vers votre page de connexion
+});
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

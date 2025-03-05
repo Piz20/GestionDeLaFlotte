@@ -1,10 +1,12 @@
 ﻿using Gestion_de_la_flotte.Data; // Contexte de base de données
 using Gestion_de_la_flotte.Models; // Modèles de données
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc; // Fonctionnalités MVC
 using Microsoft.EntityFrameworkCore; // Fonctionnalités Entity Framework Core
 
 namespace Gestion_de_la_flotte.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext _context; // Contexte de la base de données
